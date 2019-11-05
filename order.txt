@@ -1,0 +1,25 @@
+﻿$ git config --global user.name "LiYanMingGit"                     设置本机用户名
+$ git config --global user.email "liyanming_158@163.com"           设置本机用户邮箱
+
+$ mkdir learngit                                                   创建空文件
+$ cd learngit                                                      进入新建文件
+$ pwd                                                              当前位置，路径
+/Users/michael/learngit
+
+$ git init                                                         把这个目录变成Git可以管理的仓库
+Initialized empty Git repository in /Users/michael/learngit/.git/
+
+$ ls -ah                                                           查看隐藏目录
+$ git add readme.txt                                               将readme.txt添加到暂存区（可反复多次使用，添加多个文件）
+
+$ git commit -m "wrote a readme file"                              git commit是将暂存区的数据添加到仓库，-m后面输入的是本次提交的说明
+[master (root-commit) eaadf4e] wrote a readme file
+ 1 file changed, 2 insertions(+)                                   1 file changed：1个文件被改动（我们新添加的readme.txt文件）；2 insertions(+)：插入了两行内容（readme.txt有两行内容）
+ create mode 100644 readme.txt
+
+
+$ git log                                                                  命令显示从最近到最远的提交日志
+$ git log --pretty=oneline                                                 横向显示提交日志
+1094adb7b9b3807259d8cb349e7df1d4d6477073 (HEAD -> master) append GPL       “1094adb7b9b3807259d8cb349e7df1d4d6477073”为版本号，“append GPL”为版本说明
+e475afc93c209a690c39c13a46716e8fa000c366 add distributed
+eaadf4e385e865d25c48e7ca9c8395c3f7dfaef0 wrote a readme file                                           
